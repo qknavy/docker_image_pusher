@@ -24,4 +24,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file $DOCKERFILE_NAME --tag $ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_VERSION
     - name: Push Docker image to AliYun
-      run: docker push $ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_VERSION
+      run: |
+        docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
+        docker push $ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_VERSION
