@@ -11,9 +11,9 @@ env:
   ALIYUN_NAME_SPACE: "${{ secrets.ALIYUN_NAME_SPACE }}"
   ALIYUN_REGISTRY_USER: "${{ secrets.ALIYUN_REGISTRY_USER }}"
   ALIYUN_REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
-  DOCKERFILE_NAME: "Dockerfile"
-  DOCKER_IMAGE_NAME: "imageName"
-  DOCKER_IMAGE_VERSION: "latest"
+  DOCKERFILE_NAME: "dockerfile/Dockerfile"
+  DOCKER_IMAGE_NAME: "busybox"
+  DOCKER_IMAGE_VERSION: "2024"
 
 jobs:
 
