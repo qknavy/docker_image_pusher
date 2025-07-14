@@ -153,5 +153,5 @@ jobs:
             echo "=============================================================================="
             df -hT
             echo "=============================================================================="     
-            curl -H "Content-Type: application/json" -X POST "https://oapi.dingtalk.com/robot/send?access_token=bc63fb176777602217a7b22d6610f7ac6e8ff8f09d9305b43b6c969e99b26383" -d '{"msgtype":"text","text":{"content":\"镜像构建成功\"},"at":{"isAtAll":false,"atMobiles":["13552717859"]}}'
+            curl -H "Content-Type: application/json" -X POST "https://oapi.dingtalk.com/robot/send?access_token=bc63fb176777602217a7b22d6610f7ac6e8ff8f09d9305b43b6c969e99b26383" -d '{"msgtype":"text","text":{"content":"Github镜像构建成功"},"at":{"isAtAll":false,"atMobiles":["13552717859"]}}'
         done < images.txt
